@@ -1,19 +1,304 @@
-*{
+/* General Reset */
+body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-.mainContainer{
-    border: 2px solid green;
-}
-.navbarContainer{
-    border: 2px solid red;
-}
-.leftNavBarContainer
-.middleNavBarContainer
-.rightNavBarContainer{
-    border: 2px solid blue;
-}
-.maincontentcontainer{
-    border: 2px solid black;
-}
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Flex Utility */
+  .d-flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .nav-left, .nav-middle, .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ytLogo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff0000;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  
+  .search-box {
+    background-color: #eee;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 300px;
+  }
+  
+  .search-box input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 85%;
+    padding: 5px;
+  }
+  
+  .search-Div button {
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .mic-div button {
+    background-color: #eee;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .uploadBtn, .notificationBtn, .userBtn {
+    margin-left: 15px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    cursor: pointer;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 200px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .sidebar-upper a {
+    text-decoration: none;
+    color: black;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+  }
+  
+  .sidebar-upper a:hover {
+    background-color: #ddd;
+  }
+  
+  .sidebar-upper p {
+    margin: 0 0 0 10px;
+    font-size: 1rem;
+  }
+  
+  /* Main Container */
+  .mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: 200px;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .thumbanailContainer {
+    width: 100%;
+    height: 150px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .thumbnailPlaceholder {
+    font-size: 1rem;
+    color: #999;
+  }
+  
+  .detailsContainer {
+    padding: 10px;
+  }
+  
+  .logoContainer {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+  
+  .userPlaceholder {
+    font-size: 0.8rem;
+    color: #999;
+  }
+  
+  .details h3 {
+    margin: 0 0 5px;
+    font-size: 1rem;
+  }
+  
+  .details p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Scrollbars */
+  .sidebar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+  }
+  
+  /* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Flex Utility */
+  .d-flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .ytLogo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff0000;
+    text-decoration: none;
+  }
+  
+  .search-box {
+    background-color: #eee;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 300px;
+  }
+  
+  .search-box input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 85%;
+    padding: 5px;
+  }
+  
+  .search-Div button,
+  .mic-div button,
+  .uploadBtn,
+  .notificationBtn,
+  .userBtn {
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .mic-div button {
+    border-radius: 50%;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 200px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px 0;
+  }
+  
+  .sidebar hr {
+    border: 1px solid #ddd;
+  }
+  
+  /* Main Container */
+  .mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: 200px;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #ddd;
+  }
+  
+  .video-box {
+    width: 100%;
+    height: auto;
+  }
+  
+  .video-box video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .details {
+    padding: 10px;
+  }
+  
+  .details h3 {
+    margin: 0 0 5px;
+    font-size: 1rem;
+  }
+  
+  .details p {
+    margin: 2px 0;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  

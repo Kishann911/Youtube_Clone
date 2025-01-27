@@ -1,23 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube - Kishann911</title>
-    <link rel="stylesheet" href="Youtube.css">
-</head>
-<body>
-    <div class="mainContainer" id="mainContainer">
-        <div class="navbarContainer" id="navbarContaioner">
-            <div class="leftNavBarContainer" id="leftNavBarContainer"></div>
-            <div class="middleNavBarContainer" id="middleNavBarContainer"></div>
-            <div class="rightNavBarContainer" id="rightNavBarContainer"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube</title>
+    <link rel="stylesheet" href="Youtube.css" />
+  </head>
+  <body>
+    <nav class="d-flex">
+      <div class="nav-left d-flex">
+        <a href="./index.html" class="ytLogo">YouTube</a>
+      </div>
+      <div class="nav-middle d-flex">
+        <div class="search-box d-flex">
+          <input type="text" placeholder="Search" />
+          <div class="search-Div d-flex">
+            <button>Search</button>
+          </div>
         </div>
-        <div class="maincontentContainer" id="maincontentContainer">
-            <div class="sidebarContainer" id="sidebarContainer"></div>
-            <div class="videoMainContainer" id="videoMainContainer"></div>
+        <div class="mic-div d-flex">
+          <button class="mic-icon">Voice Search</button>
         </div>
+      </div>
+      <div class="nav-right d-flex">
+        <button class="uploadBtn">Upload</button>
+        <button class="notificationBtn">Notifications</button>
+        <button class="userBtn">User</button>
+      </div>
+    </nav>
 
+    <!-- Sidebar starts -->
+    <div class="sidebar">
+      <div class="sidebar-upper">
+        <a class="d-flex" href=""><p>Home</p></a>
+        <a class="d-flex" href=""><p>Shorts</p></a>
+        <a class="d-flex" href=""><p>Subscriptions</p></a>
+        <hr />
+        <a class="d-flex" href=""><p>Channel</p></a>
+        <a class="d-flex" href=""><p>History</p></a>
+        <a class="d-flex" href=""><p>Playlist</p></a>
+        <a class="d-flex" href=""><p>Library</p></a>
+        <a class="d-flex" href=""><p>Explore</p></a>
+        <a class="d-flex" href=""><p>Watch Later</p></a>
+        <a class="d-flex" href=""><p>Liked Videos</p></a>
+        <a class="d-flex" href=""><p>Your Clips</p></a>
+        <hr />
+      </div>
     </div>
-</body>
+
+    <!-- Main Content -->
+    <div class="mainContainer d-flex">
+      <!-- Video Card -->
+      <div class="card">
+        <div class="video-box">
+          <video controls>
+            <source src="./videos/sample1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="details">
+          <h3>Sample Video Title</h3>
+          <p>133K views</p>
+          <p>Streamed 3 weeks ago</p>
+        </div>
+      </div>
+
+      <!-- Duplicate for More Cards -->
+      <div class="card">
+        <div class="video-box">
+          <video controls>
+            <source src="./videos/sample2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="details">
+          <h3>Another Sample Video</h3>
+          <p>50K views</p>
+          <p>Uploaded 1 month ago</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
